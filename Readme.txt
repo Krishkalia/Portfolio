@@ -1,6 +1,2 @@
-Thanks for downloading this template!
-
-Template Name: iPortfolio
-Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+🌐 Krish Kalia – Portfolio Website
+A responsive and modern personal portfolio built with HTML, CSS, JavaScript, and Bootstrap to showcase my skills, projects, and experience as a MERN Stack and React-Firebase developer.
