@@ -9,30 +9,49 @@ const projects = [
     category: "Web Development",
     tools: "HTML, CSS, JavaScript, Responsive Design",
     image: "/images/portfolio.png",
-  },
-  {
-    title: "E-Commerce Website",
-    category: "Full Stack",
-    tools: "Frontend, Backend, Database, Auth",
-    image: "/images/ecom.png",
-  },
-  {
-    title: "Wordle Guess The Movie Game",
-    category: "Game Development",
-    tools: "HTML, CSS, JavaScript, Bootstrap",
-    image: "/images/wordle.png",
-  },
-  {
-    title: "Mood Based Playlist Generator",
-    category: "Backend / API",
-    tools: "Node.js, Spotify API, Gemini API",
-    image: "/images/mood.png",
+    link: "https://github.com/Krishkalia/Portfolio",
   },
   {
     title: "RD Collection System",
     category: "MERN Stack (Ongoing)",
     tools: "React, Node.js, Express, MongoDB",
     image: "/images/rd.png",
+    link: "https://rd-collection-sysytem.vercel.app/admin",
+  },
+  {
+    title: "BLE Attendance System",
+    category: "Full Stack / Mobile App",
+    tools: "Node.js, React Native, MongoDB, Socket.io, BLE",
+    image: "/images/ble-attendance.png",
+    link: "https://github.com/Krishkalia/BLE-Attendence-system",
+  },
+  {
+    title: "TutFind",
+    category: "Web Platform",
+    tools: "Tutor & Student Booking Platform",
+    image: "/images/tutfind.png",
+    link: "https://github.com/Krishkalia/TutFind",
+  },
+  {
+    title: "AI-Interviewer",
+    category: "AI Application",
+    tools: "AI Interview Assistant",
+    image: "/images/ai-interviewer.png",
+    link: "https://hackviet.vercel.app",
+  },
+  {
+    title: "MediVault",
+    category: "MERN Stack / AI",
+    tools: "React, Node.js, MongoDB, Gemini API, Tailwind CSS",
+    image: "/images/medivault.png",
+    link: "https://github.com/Krishkalia/Medivault",
+  },
+  {
+    title: "KINFED Website",
+    category: "Government Website",
+    tools: "React, Vite, Web Development",
+    image: "/images/kinfed.png",
+    link: "https://kinfed.com",
   },
 ];
 
@@ -113,7 +132,7 @@ const Work = () => {
                       </div>
                     </div>
                     <div className="carousel-image-wrapper">
-                      <WorkImage image={project.image} alt={project.title} />
+                      <WorkImage image={project.image} alt={project.title} link={project.link} />
                     </div>
                   </div>
                 </div>
