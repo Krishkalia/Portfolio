@@ -37,7 +37,7 @@ const projects = [
     category: "AI Application",
     tools: "AI Interview Assistant",
     image: "/images/ai-interviewer.png",
-    link: "https://hackviet.vercel.app",
+    link: "https://cognitiveecho.vercel.app",
   },
   {
     title: "MediVault",
