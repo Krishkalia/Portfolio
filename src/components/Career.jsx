@@ -43,16 +43,15 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Freelance Video Editor</h4>
-                <h5>Self-Employed</h5>
+                <h4>Web Developer Freelance</h4>
+                <h5>Freelance | Remote Jalandhar, Punjab</h5>
               </div>
-              <h3>Current</h3>
+              <h3>2025 - Present</h3>
             </div>
             <p>
-              Professional video editor with experience in content creation and
-              storytelling. Awarded 1st prize in the Video Editing Competition at
-              DAVIET 2026. Specialized in creating engaging visual content for
-              various platforms.
+              Developed 2+ commercial MERN stack platforms with dynamic admin panels, achieving seamless cross-device rendering and 99.9% uptime. Integrated secure authentication and optimized SEO features, reducing bounce rates and accelerating media asset delivery by 30%. Engineered high-conversion user flows that directly increased client sales by 40%.
+              <br /><br />
+              <span style={{ color: "var(--accentColor)", fontWeight: 500 }}>Technologies / Skills Used:</span> MERN, Responsive Design, React, Node.js, Express, MongoDB
             </p>
           </div>
         </div>

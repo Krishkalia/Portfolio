@@ -9,6 +9,7 @@ import SocialIcons from "./SocialIcons";
 import WhatIDo from "./WhatIDo";
 import Work from "./Work";
 import setSplitText from "./utils/splitText";
+import MobileTechStack from "./MobileTechStack";
 
 const TechStack = lazy(() => import("./TechStack"));
 
@@ -46,6 +47,7 @@ const MainContainer = ({ children }) => {
                 <TechStack />
               </Suspense>
             )}
+            {!isDesktopView && <MobileTechStack />}
             <Contact />
           </div>
         </div>
