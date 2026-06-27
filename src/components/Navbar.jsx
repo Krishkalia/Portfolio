@@ -10,20 +10,18 @@ export let smoother;
 
 const Navbar = () => {
   useEffect(() => {
-    if (window.innerWidth > 1024) {
-      smoother = ScrollSmoother.create({
-        wrapper: "#smooth-wrapper",
-        content: "#smooth-content",
-        smooth: 1.7,
-        speed: 1.7,
-        effects: true,
-        autoResize: true,
-        ignoreMobileResize: true,
-      });
+    smoother = ScrollSmoother.create({
+      wrapper: "#smooth-wrapper",
+      content: "#smooth-content",
+      smooth: 1.7,
+      speed: 1.7,
+      effects: true,
+      autoResize: true,
+      ignoreMobileResize: true,
+    });
 
-      smoother?.scrollTop(0);
-      smoother?.paused(true);
-    }
+    smoother.scrollTop(0);
+    smoother.paused(true);
 
     let links = document.querySelectorAll(".header ul a");
     links.forEach((elem) => {
@@ -33,14 +31,12 @@ const Navbar = () => {
           e.preventDefault();
           let elem = e.currentTarget;
           let section = elem.getAttribute("data-href");
-          smoother?.scrollTo(section, true, "top top");
+          smoother.scrollTo(section, true, "top top");
         }
       });
     });
     window.addEventListener("resize", () => {
-      if (window.innerWidth > 1024) {
-        ScrollSmoother.refresh(true);
-      }
+      ScrollSmoother.refresh(true);
     });
   }, []);
   return (
