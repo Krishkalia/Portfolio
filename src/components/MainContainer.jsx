@@ -1,4 +1,6 @@
 import { lazy, Suspense, useEffect, useState } from "react";
+import { useLoading } from "../context/LoadingProvider";
+import { setProgress } from "./Loading";
 import About from "./About";
 import Career from "./Career";
 import Contact from "./Contact";
@@ -15,6 +17,14 @@ const TechStack = lazy(() => import("./TechStack"));
 
 const MainContainer = ({ children }) => {
   const [isDesktopView, setIsDesktopView] = useState(window.innerWidth > 1024);
+  const { setLoading } = useLoading();
+
+  useEffect(() => {
+    if (!isDesktopView) {
+      let progress = setProgress((value) => setLoading(value));
+      progress.loaded();
+    }
+  }, [isDesktopView, setLoading]);
 
   useEffect(() => {
     const resizeHandler = () => {
