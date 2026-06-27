@@ -7,26 +7,42 @@ import { LoadingProvider } from "./context/LoadingProvider";
 
 const App = () => {
   useEffect(() => {
+    let hasPlayed = false;
     const audio = new Audio('/voice/intro.mp3');
-    const playAudio = () => {
-      audio.play().catch(e => console.log("Autoplay prevented:", e));
-      document.removeEventListener('click', playAudio);
-      document.removeEventListener('touchstart', playAudio);
-      document.removeEventListener('keydown', playAudio);
+    audio.volume = 1.0;
+
+    const tryPlay = () => {
+      if (hasPlayed) return;
+      
+      const playPromise = audio.play();
+      if (playPromise !== undefined) {
+        playPromise.then(() => {
+          hasPlayed = true;
+          document.removeEventListener('click', tryPlay);
+          document.removeEventListener('touchstart', tryPlay);
+          document.removeEventListener('keydown', tryPlay);
+          document.removeEventListener('scroll', tryPlay);
+        }).catch(error => {
+          console.warn("Autoplay blocked. Waiting for interaction.", error);
+        });
+      }
     };
 
-    // Try autoplay first
-    audio.play().catch(e => {
-      // If prevented, attach listeners
-      document.addEventListener('click', playAudio);
-      document.addEventListener('touchstart', playAudio);
-      document.addEventListener('keydown', playAudio);
-    });
+    // Try playing immediately
+    tryPlay();
+
+    // If blocked, these listeners will trigger it when the user interacts
+    document.addEventListener('click', tryPlay);
+    document.addEventListener('touchstart', tryPlay);
+    document.addEventListener('keydown', tryPlay);
+    document.addEventListener('scroll', tryPlay, { once: true });
 
     return () => {
-      document.removeEventListener('click', playAudio);
-      document.removeEventListener('touchstart', playAudio);
-      document.removeEventListener('keydown', playAudio);
+      audio.pause();
+      document.removeEventListener('click', tryPlay);
+      document.removeEventListener('touchstart', tryPlay);
+      document.removeEventListener('keydown', tryPlay);
+      document.removeEventListener('scroll', tryPlay);
     };
   }, []);
 
