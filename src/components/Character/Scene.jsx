@@ -12,6 +12,8 @@ import {
 } from "./utils/mouseUtils";
 import setAnimations from "./utils/animationUtils";
 import { setProgress } from "../Loading";
+import MagicRings from "../MagicRings";
+import magicRingsConfig from "../../config/magicRingsConfig";
 
 const Scene = () => {
   const canvasDiv = useRef(null);
@@ -149,6 +151,9 @@ const Scene = () => {
     <>
       <div className="character-container">
         <div className="character-model" ref={canvasDiv}>
+          <div className="character-rings-bg">
+            <MagicRings {...magicRingsConfig} />
+          </div>
           <div className="character-rim"></div>
           <div className="character-hover" ref={hoverDivRef}></div>
         </div>
