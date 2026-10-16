@@ -54,6 +54,20 @@ const Career = () => {
               <span style={{ color: "var(--accentColor)", fontWeight: 500 }}>Technologies / Skills Used:</span> MERN, Responsive Design, React, Node.js, Express, MongoDB
             </p>
           </div>
+          <div className="career-info-box">
+            <div className="career-info-in">
+              <div className="career-role">
+                <h4>Software Development Intern</h4>
+                <h5>Emeritus</h5>
+              </div>
+              <h3>Sept 2026 - Present</h3>
+            </div>
+            <p>
+              Started internship on September 21, 2026. Contributing as a Software Development Intern at Emeritus, building and scaling modern web features, collaborating across engineering teams, and delivering high-quality full-stack solutions.
+              <br /><br />
+              <span style={{ color: "var(--accentColor)", fontWeight: 500 }}>Technologies / Skills Used:</span> React, Node.js, JavaScript, Full-Stack Development
+            </p>
+          </div>
         </div>
       </div>
     </div>

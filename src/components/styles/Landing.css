@@ -192,9 +192,32 @@
   font-family: "Geist", sans-serif;
 }
 
-/* .landing-intro h1 span {
-   font-weight: 200; 
-} */
+.landing-tech-name {
+  margin: 0;
+  margin-top: 6px;
+  margin-left: -5%;
+  width: 105%;
+  max-width: 105%;
+  display: block;
+}
+
+.landing-tech-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.landing-tech-line {
+  position: relative;
+  width: 100%;
+  height: 52px;
+}
 
 .landing-info {
   position: absolute;
@@ -284,6 +307,10 @@ h2.landing-info-h2 {
     line-height: 30px;
   }
 
+  .landing-tech-line {
+    height: 60px;
+  }
+
   .landing-info h2 {
     font-size: 35px;
     line-height: 40px;
@@ -306,6 +333,10 @@ h2.landing-info-h2 {
   .landing-intro h1 {
     font-size: 40px;
     line-height: 35px;
+  }
+
+  .landing-tech-line {
+    height: 75px;
   }
 
   .landing-info h3 {
@@ -337,9 +368,15 @@ h2.landing-info-h2 {
 
   .landing-intro {
     top: 50%;
-    left: auto;
-    right: 66%;
-    transform: translate(0%, -50%);
+    left: 0;
+    right: auto;
+    transform: translateY(-50%);
+    width: 44vw;
+    max-width: 680px;
+  }
+
+  .landing-tech-line {
+    height: 90px;
   }
 
   .landing-info {
@@ -356,9 +393,15 @@ h2.landing-info-h2 {
 @media screen and (min-width: 1200px) {
   .landing-intro {
     top: 50%;
-    left: auto;
-    right: 70%;
-    transform: translate(0%, -50%);
+    left: 0;
+    right: auto;
+    transform: translateY(-50%);
+    width: 44vw;
+    max-width: 740px;
+  }
+
+  .landing-tech-line {
+    height: 105px;
   }
 
   .landing-info {
@@ -380,6 +423,15 @@ h2.landing-info-h2 {
   .landing-intro h1 {
     font-size: 60px;
     line-height: 55px;
+  }
+
+  .landing-intro {
+    width: 46vw;
+    max-width: 860px;
+  }
+
+  .landing-tech-line {
+    height: 125px;
   }
 
   .landing-info h3 {
